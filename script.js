@@ -10,7 +10,7 @@ arr.forEach(function (value,key,ar) {
    table.append(node)
     arr1.push(value['name']);
 })
-
+/*Add script*/
 /*document.getElementById('progress').value = '50';*/
 
 // fetch('https://api2.binance.com/api/v3/ticker/24hr')
