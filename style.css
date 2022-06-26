@@ -1,0 +1,109 @@
+.anim_p {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-fill-mode:forwards;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 1;
+      display: block;
+        margin-left: 100%;
+        width: 300%;
+
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 0;
+        width: 100%;
+       overflow: hidden;
+    }
+}
+.video{
+    background-color: darkgrey;
+    width: 700px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.video:hover .play_stop{
+   visibility: visible;
+    opacity: 0.2;
+}
+.play_stop{
+    width: 50px;
+    height: 50px;
+    background-color: #2C2E30;
+    opacity: 0;
+position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    visibility: hidden;
+}
+.play_stop:hover{
+    width: 60px;
+    height: 60px;
+}
+.play_stop:after{
+    font-family: Font Awesome\ 6 Free;
+    content: "\f04b";
+    font-weight: 900;
+    color: #fff;
+    font-size: 20px;
+}
+.video.active .play_stop{
+    width: 75px;
+    height: 75px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+}
+.video.active .play_stop:after{
+    font-family: Font Awesome\ 6 Free;
+    content: "\f04c";
+    font-weight: 900;
+    color: #fff;
+    font-size:32px;
+    transition: all 0.3s ease;
+}
+.preloader{
+    position: fixed;
+    overflow: hidden;
+    /* фоновый цвет */
+    background: #fff;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.preloader img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+}
+.preload .preloader{
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.loaded .preloader{
+   display: none;
+}
