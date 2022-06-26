@@ -24,7 +24,7 @@ arr.forEach(function (value,key,ar) {
 //
 //     return (arrgs = data)
 // }
-
+/*Add script*/
 const int = () =>{
     let count = 1;
     return () =>{
